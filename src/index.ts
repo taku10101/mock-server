@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 
 import { prettyJSON } from "hono/pretty-json";
-import openapi from "./open_api/route";
+import openapi from "./open_api/route/index.js";
 
 const app = new Hono();
 app.use(prettyJSON());

@@ -1,4 +1,4 @@
-import { AnyZodObject, ZodEffects } from "zod";
+import type { AnyZodObject, ZodEffects } from "zod";
 
 export type ZodObjectWithEffect =
   | AnyZodObject

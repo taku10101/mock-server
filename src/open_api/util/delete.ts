@@ -1,6 +1,6 @@
-import { AnyZodObject, ZodSchema } from "zod";
-import { RouteConfig } from "@hono/zod-openapi";
-import { ZodObjectWithEffect } from "../type/params";
+import type { AnyZodObject, ZodSchema } from "zod";
+import type { RouteConfig } from "@hono/zod-openapi";
+import type { ZodEffects } from "zod";
 
 type deleteRouteProps = {
   path: string;
@@ -21,7 +21,7 @@ export const deleteRoute = (
     tags: [props.tags],
     description: props.description,
     request: {
-      params: props.paramsSchema as AnyZodObject | ZodObjectWithEffect,
+      params: props.paramsSchema as AnyZodObject | ZodEffects<any>,
     },
     responses: {
       200: {

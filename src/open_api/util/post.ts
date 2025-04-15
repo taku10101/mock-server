@@ -1,6 +1,6 @@
-import { AnyZodObject, ZodSchema } from "zod";
-import { ZodObjectWithEffect } from "../type/params";
-import { RouteConfig } from "@hono/zod-openapi";
+import type { AnyZodObject, ZodSchema } from "zod";
+import type { RouteConfig } from "@hono/zod-openapi";
+import type { ZodEffects } from "zod";
 
 type postRouteProps = {
   path: string;
@@ -22,7 +22,7 @@ export const postRoute = (
     summary: props.summary,
     description: props.description,
     request: {
-      params: props.paramsSchema as AnyZodObject | ZodObjectWithEffect,
+      params: props.paramsSchema as AnyZodObject | ZodEffects<any>,
       body: {
         content: {
           "application/json": {

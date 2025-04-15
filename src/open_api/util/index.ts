@@ -1,4 +1,4 @@
-export * from "./get";
-export * from "./post";
-export * from "./put";
-export * from "./delete";
+export {getRoute}from "./get.js";
+export {postRoute}from "./post.js";
+export {putRoute} from "./put.js"
+export {deleteRoute} from "./delete.js";
